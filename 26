@@ -1,0 +1,32 @@
+with open('var-26.txt', 'r') as F :
+    f=F.readline()
+    n,m = map(int,f.split())
+    a=[]
+    b=[]
+    sum=0
+    ost=0
+    z=[]
+    p=0
+    for x in range(n-1):
+        q=F.readline().split()
+        e=int(q[0])
+        w=q[1]
+        if w =='A':
+            a.append([e])
+        if w =='B':
+            b.append([e])
+    b.sort(key=lambda x:x[0])
+    for y in range(len(b)):
+        o=b[y]
+        if o+sum <= m:
+            sum+=o
+    ost=m-sum
+    sum=0
+    z.sort(key=lambda x:x[0]) 
+    for l in range(len(z)):
+        r=z[l]
+        if  sum+r <= ost:
+            sum+=r
+        else:
+            ost-=sum
+            print(b.count, ost)
