@@ -1,0 +1,10 @@
+with open('var-24.txt', 'r') as F:
+    f=F.readline()
+    s=1
+    maxLen=1
+    for i in range(len(f)-1):
+        if f[i]==f[i+1] and f[i]=='R':
+            s+=1
+            if maxLen<s:
+                maxLen=s
+    print(maxLen)
