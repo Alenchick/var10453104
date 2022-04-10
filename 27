@@ -1,0 +1,17 @@
+with open('var-27.txt', 'r') as F:
+    f=int,F.readlines()
+    print(f)
+    sm=0
+    maxSm=0
+    s=[]
+    for i in range(2,len(f)):
+        c=f[i-1]%160
+        d=f[i]%160
+        if (c != d) and (f[i-1]%7==0 or f[i]%7==0):
+            sm=f[i-1]+f[i]
+            if sm > maxSm:
+                maxSm=sm
+                a=f[i-1]
+                b=f[i]
+                s.append(a,b)
+print(s)
