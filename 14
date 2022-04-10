@@ -1,0 +1,7 @@
+s=[]
+q=0
+for x in range(10,18):
+    while x > 0:
+        s.append(x%5)
+        x = x // 5
+print(s)
