@@ -1,0 +1,12 @@
+for i in range(95632,95701):
+    d=0
+    c=0
+    s=[]
+    for x in range(1,95701):
+        if (i%x) == 0:
+            d=x
+            if d%2==0:
+                c+=1
+                s.append(d)
+                if c==6:
+                    print(i,s)
